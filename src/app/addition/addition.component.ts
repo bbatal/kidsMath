@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-addition',
@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./addition.component.scss']
 })
 export class AdditionComponent implements OnInit {
+
+  @Output() exampleNumber: number = (Math.floor(22 * Math.random()));
+            exampleNumber2: number = (Math.floor(33 * Math.random()));
+            exampleAnswer: number = this.exampleNumber + this.exampleNumber2;
+ 
 
   constructor() { }
 
