@@ -1,4 +1,6 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { MathLogicService } from '../math-logic.service';
+
 
 @Component({
   selector: 'app-addition',
@@ -6,15 +8,57 @@ import { Component, OnInit, Output } from '@angular/core';
   styleUrls: ['./addition.component.scss']
 })
 export class AdditionComponent implements OnInit {
+numbers: number[];
+question: number;
+question2: number;
+answer: number;
+rightBox: number = 0;
+wrongBox: number = 0;
 
-  @Output() exampleNumber: number = (Math.floor(22 * Math.random()));
-            exampleNumber2: number = (Math.floor(33 * Math.random()));
-            exampleAnswer: number = this.exampleNumber + this.exampleNumber2;
- 
 
-  constructor() { }
+  constructor(private numGen: MathLogicService) {
+  
+   }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.question = Math.floor(Math.random() * (25));
+    this.question2 = Math.floor(Math.random() * 30);
+    this.answer = this.question + this.question2;
+
+    this.numbers = [
+      Math.floor(Math.random() * 5),
+      Math.floor(Math.random() * 20),
+      this.answer,
+      Math.floor(Math.random() * 25)
+    ]
+    
+    this.rightBox = this.numGen.addCorrectAns;
+    this.wrongBox = this.numGen.addWrongAns;
+  }
+  shuffle(array) {
+    let m = array.length, t, i;
+  
+    // While there remain elements to shuffle…
+    while (m) {
+  
+      // Pick a remaining element…
+      i = Math.floor(Math.random() * m--);
+  
+      // And swap it with the current element.
+      t = array[m];
+      array[m] = array[i];
+      array[i] = t;
+    }
+    return array;
+  }
+
+  myFunction(event) {
+    if (event.target.innerText == this.answer) {
+      this.numGen.addCorrectBox();
+    } else {
+      this.numGen.addWrongBox();
+    }
+    this.ngOnInit();
   }
 
 }

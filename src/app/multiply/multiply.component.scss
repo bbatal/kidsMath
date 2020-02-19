@@ -42,6 +42,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 10px;
+    background-color: darkolivegreen;
 }
 
 .header {
@@ -51,4 +52,31 @@
 
 .header a {
     text-decoration: none;
+}
+
+.puzzle_statement {
+    width: 100%;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.Answers {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.Puzzle_Answers .Answers {
+    width: 80%;
+    height: 40px;
+    cursor: pointer;
+    font-size: 2rem;
+    color: whitesmoke;
+    outline: none;
+    margin: auto;
+    margin-top: 50px;
+}
+.Puzzle_Answers #answer:hover {
+    border: 1px solid yellow;
+    padding: 10px;
 }

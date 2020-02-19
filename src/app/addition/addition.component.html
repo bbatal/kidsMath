@@ -4,26 +4,19 @@
     </header>
     <div class="Puzzle_Container">
         <div class="Results">
-                <div class="Correct_Results"></div>
-                <div class="Incorrect_Results"></div>
-        </div>
-        <Div class="Puzzle">
-        <h1 class="puzzle_statement" [innerHTML]="exampleNumber + ' + ' + exampleNumber2 + ' = ' + exampleAnswer "></h1>
-            <div class="Puzzle_Answers">
-                <div class="Answers">
-                        <span></span>
-                </div>
-                <div class="Answers">
-                        <span></span>
-                </div>
-                <div class="Answers">
-                        <span></span>
-                </div>
-                <div class="Answers">
-                        <span></span>
-                </div>
-            </div>
-        </Div>
-        
+        <div class="Correct_Results"> {{rightBox}} </div>
+        <div class="Incorrect_Results"> {{wrongBox}} </div>
     </div>
+    <Div class="Puzzle">
+    <h1 class="puzzle_statement"> {{question}} + {{question2}} = __?</h1>
+        <div class="Puzzle_Answers">
+            <div class="Answers" *ngFor="let number of shuffle(numbers)">
+            <span id="answer" (click)="myFunction($event)">{{number}}</span>
+            </div>
+            
+        </div>
+    </Div>
+    
 </div>
+</div>
+
