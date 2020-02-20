@@ -130,21 +130,33 @@
     outline-width: 1px;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 870px) {
+    .Puzzle_Container {
+        max-width: 95%;
+    }
+
+    .Puzzle {
+        width: 93%;
+    }
+} 
+
+
+@media only screen and (max-width: 767px) {
     .Puzzle_Container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        max-width: 99%;
+        max-width: 85%;
+        height: 420px;
         border: 1px solid black;
     }
 
     .Puzzle {
         border: 1px solid black;
-        height: 450px;
+        height: 390px;
         margin-bottom: 20px;
         background-color: darkolivegreen;
-        width: 96%;
+        width: 90%;
     }
 
     .Results {
@@ -155,6 +167,29 @@
         height: 15px;
         padding: 10px;
         justify-content: flex-end;
+    }
+
+    .puzzle_statement {
+        margin-left: 20px;
+        font-size: 25px;
+    }
+
+    .Answers a {
+        padding-right: 5%;
+    }
+
+    .Answers {
+        font-size: 1.7rem;
+        margin-top: -12px;
+    }
+
+    .Puzzle_Answers {
+        width: 60%;
+        margin-left: 20px;
+    }
+
+    .header a {
+        font-size: 3.5rem;
     }
 }
 
