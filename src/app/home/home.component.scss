@@ -1,44 +1,56 @@
 .app {
-    max-width: 1200px;
+    display: flex;
     width: 100%;
-    margin: 0 auto;
-    height: 750px;
+    margin: 0;
+    height: 80vh;
+    margin-top: 30px;
 }
 
 .Categories_Wrapper {
-    border: 1px solid black;
-    height: 700px;
-    margin-top: 20px;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .header {
-    text-align: center;
     margin-top: 10px;
-    border: 1px solid black;
 }
 
 .header a {
     text-decoration: none;
+    font-size: 4.5rem;
+    color: whitesmoke;
 }
 
 .Categories {
-    width: 40%;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 500px;
+    align-items: center;
+    justify-content: space-between;
     list-style-type: none;
-    border: 1px solid black;
-    margin: auto;
-    margin-top: 20px;
 }
 
-.wood {
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-right: 150px;
-    width: 200px;
+.Categories .wood {    
+    flex: 1 1 auto;
     border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgba($color: #602525, $alpha: 1.0);
+    padding: 10px 50px;
+    text-align: center; 
+    margin-top: 40px;
+}
+
+.Categories ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .Categories .wood a {
-    margin-left: 60px;
     text-decoration: none;
+    color: whitesmoke;
+    font-size: 30px;
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MathLogicService } from '../math-logic.service';
+import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -14,6 +15,8 @@ question2: number;
 answer: number;
 rightBox: number = 0;
 wrongBox: number = 0;
+faCheck = faCheck;
+faTimes = faTimes;
 
 
   constructor(private numGen: MathLogicService) {

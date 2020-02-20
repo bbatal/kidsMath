@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MathLogicService } from '../math-logic.service';
+import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-comparison',
@@ -13,6 +14,8 @@ export class ComparisonComponent implements OnInit {
   answer: string;
   rightBox: number = 0;
   wrongBox: number = 0;
+  faCheck = faCheck;
+  faTimes = faTimes;
 
 
   constructor(private numGen: MathLogicService) { }

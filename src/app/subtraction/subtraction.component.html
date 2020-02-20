@@ -4,14 +4,14 @@
         </header>
         <div class="Puzzle_Container">
             <div class="Results">
-            <div class="Correct_Results"> {{rightBox}} </div>
-            <div class="Incorrect_Results"> {{wrongBox}} </div>
+            <div class="Correct_Results"><fa-icon [icon]="faCheck" class="checkmark"></fa-icon> {{rightBox}} </div>
+            <div class="Incorrect_Results"><fa-icon [icon]="faTimes" class="wrong"></fa-icon> {{wrongBox}} </div>
             </div>
             <Div class="Puzzle">
             <h1 class="puzzle_statement">{{question}} - {{question2}} = __?</h1>
                 <div class="Puzzle_Answers">
-                        <div class="Answers" *ngFor="let number of shuffle(numbers)">
-                        <span id="answer" (click)="myFunction($event)">{{number}}</span>
+                        <div class="Answers" *ngFor="let number of shuffle(numbers); let i = index">
+                            <span>{{i+1}})  </span><a id="answer" (click)="myFunction($event)">{{number}}</a>
                         </div>
                         
                     </div>
