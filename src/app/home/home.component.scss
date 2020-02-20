@@ -1,0 +1,44 @@
+.app {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    height: 750px;
+}
+
+.Categories_Wrapper {
+    border: 1px solid black;
+    height: 700px;
+    margin-top: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-top: 10px;
+    border: 1px solid black;
+}
+
+.header a {
+    text-decoration: none;
+}
+
+.Categories {
+    width: 40%;
+    list-style-type: none;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.wood {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 150px;
+    width: 200px;
+    border: 1px solid black;
+}
+
+.Categories .wood a {
+    margin-left: 60px;
+    text-decoration: none;
+}
