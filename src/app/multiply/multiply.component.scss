@@ -126,6 +126,10 @@
     padding-bottom: 10px;
 }
 
+.Answers a:focus {
+    outline-width: 1px;
+}
+
 @media only screen and (max-width: 850px) {
     .Puzzle_Container {
         display: flex;
@@ -152,4 +156,17 @@
         padding: 10px;
         justify-content: flex-end;
     }
+}
+
+#description {
+    display: none;
+}
+#correct {
+    display: none;
+}
+#wrong {
+    display: none;
+}
+#question {
+    display: none;
 }

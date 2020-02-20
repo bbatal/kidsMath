@@ -61,4 +61,13 @@ export class MultiplyComponent implements OnInit {
     this.ngOnInit();
   }
 
+  accessLink(event) {
+    if (event.code == "Enter") {
+      if (event.target.id == "answer") {
+        this.myFunction(event);
+      }
+    };
+    return false;
+}
+
 }

@@ -1,21 +1,34 @@
 <div class="Page_Wrapper">
-        <header class="header">
-            <a routerLink="" routerLinkActive="active">Kids Math</a>
-        </header>
-        <div class="Puzzle_Container">
-            <div class="Results">
-            <div class="Correct_Results"><fa-icon [icon]="faCheck" class="checkmark"></fa-icon> {{rightBox}} </div>
-            <div class="Incorrect_Results"><fa-icon [icon]="faTimes" class="wrong"></fa-icon> {{wrongBox}} </div>
+    <header class="header" aria-describedby="description" tabindex="1">
+        <a routerLink="" routerLinkActive="active">Kids Math</a>
+    </header>
+    <div class="Puzzle_Container" tabindex="-1">
+        <div class="Results" tabindex="-1">
+        <div class="Correct_Results" tabindex="4" aria-describedby="correct" aria-roledescription="correct answer counter"><fa-icon [icon]="faCheck" class="checkmark"></fa-icon> {{rightBox}} </div>
+        <div class="Incorrect_Results" tabindex="5" aria-describedby="wrong" aria-roledescription="incorrect answer counter"><fa-icon [icon]="faTimes" class="wrong"></fa-icon> {{wrongBox}} </div>
+    </div>
+    <Div class="Puzzle">
+    <h1 class="puzzle_statement" tabindex="2" aria-describedby="question"> {{question}} - {{question2}} = __?</h1>
+        <div class="Puzzle_Answers">
+            <div class="Answers" *ngFor="let number of shuffle(numbers); let i = index">
+                <span>{{i+1}})  </span><a role="button" id="answer" (click)="myFunction($event)" (keypress)="accessLink($event)" tabindex="3">{{number}}</a>
             </div>
-            <Div class="Puzzle">
-            <h1 class="puzzle_statement">{{question}} - {{question2}} = __?</h1>
-                <div class="Puzzle_Answers">
-                        <div class="Answers" *ngFor="let number of shuffle(numbers); let i = index">
-                            <span>{{i+1}})  </span><a id="answer" (click)="myFunction($event)">{{number}}</a>
-                        </div>
-                        
-                    </div>
-            </Div>
             
         </div>
-    </div>
+    </Div>
+    
+</div>
+</div>
+
+<div id="description">
+    Welcome to the subtraction page, see how many of the questions below you can answer correctly
+</div>
+<div id="correct">
+    You have answered {{rightBox}} questions correctly
+</div>
+<div id="wrong">
+    You have answered {{wrongBox}} questions incorrectly
+</div>
+<div id="question">
+    Question: {{question}} + {{question2}} = blank
+</div>
