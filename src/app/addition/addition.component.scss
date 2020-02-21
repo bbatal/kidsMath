@@ -1,54 +1,203 @@
 .Page_Wrapper {
-    max-width: 1200px;
     width: 100%;
-    margin: 0 auto;
-    height: 750px;
-}
-
-.Puzzle_Container {
-    border: 1px solid black;
-    padding-top: 15px;
-    padding-right: 10px;
-    margin-top: 20px;
-}
-
-.Results {
-    border: 1px solid black;
-    height: 20px;
-    margin-left: 80%;
-    padding: 10px;
-}
-
-.Correct_Results {
-    border: 1px solid black;
-    height: 10px;
-    padding: 5px;
-    width: 80px;
-    float: left;
-}
-
-.Incorrect_Results {
-    border: 1px solid black;
-    height: 10px;
-    padding: 5px;
-    width: 80px;
-    float: left;
-    margin-left: 30px;
-}
-
-.Puzzle {
-    border: 1px solid black;
-    height: 600px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 10px;
+    margin: 0;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
 }
 
 .header {
-    text-align: center;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .header a {
     text-decoration: none;
+    font-size: 4.5rem;
+    color: whitesmoke;
+    font-family: made-up;
+}
+
+.Puzzle_Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 800px;
+    height: 500px;
+    background-color: red;
+    box-shadow: 10px 5px 25px;
+    margin-top: 20px;
+    background-image: url("src/assets/images/wood-pattern.png");
+    background-color: #0a0000;;
+}
+
+.Results {
+    display: flex;
+    width: 700px;
+    height: 15px;
+    padding: 10px;
+    justify-content: flex-end;
+}
+
+.Correct_Results {
+    line-height: 30px;
+    height: 33px;
+    margin-top: -10px;
+    width: 80px;
+    text-align: center;
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+.Correct_Results .checkmark {
+    color: rgb(61, 200, 61);
+    font-size: 25px;
+}
+
+.Incorrect_Results {
+    line-height: 30px;
+    height: 33px;
+    margin-top: -10px;
+    width: 80px;
+    text-align: center;
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+.Incorrect_Results .wrong {
+    color: red;
+    font-size: 25px;
+}
+
+.Puzzle {
+    height: 450px;
+    margin-bottom: 20px;
+    background-color: #1e683d;
+    width: 760px;
+    box-shadow: 2px 2px 3px inset;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.puzzle_statement {
+    color: whitesmoke;
+    height: 35px;
+    margin-left: 80px;
+    padding: 10px 20px;
+    font-size: 40px;
+}
+
+.Answers {
+    text-align: center;
+    font-size: 2rem;
+    text-align: left;
+    padding: 10px 20px;
+}
+
+.Answers {
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    font-size: 2rem;
+    color: whitesmoke;
+    outline: none;
+    margin: auto;
+}
+.Puzzle_Answers {
+    width: 60%;
+    margin-left: 80px;
+}
+.Puzzle_Answers .Answers {
+    border: 1px solid transparent;
+}
+.Puzzle_Answers .Answers:hover {
+    border: 1px solid yellow;
+    cursor: pointer;
+}
+
+// makes the div seem as if it is clickable from anywhere inside yellow hover border
+.Answers a {
+    border: 1px solid transparent;
+    padding-right: 60%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.Answers a:focus {
+    outline-width: 1px;
+}
+
+@media only screen and (max-width: 870px) {
+    .Puzzle_Container {
+        max-width: 95%;
+    }
+
+    .Puzzle {
+        width: 93%;
+    }
+} 
+
+
+@media only screen and (max-width: 767px) {
+    .Puzzle_Container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 85%;
+        height: 420px;
+    }
+
+    .Puzzle {
+        height: 390px;
+        margin-bottom: 20px;
+        background-color: #1e683d;
+        width: 90%;
+    }
+
+    .Results {
+        display: flex;
+        width: 96%;
+        flex: 1 1 auto;
+        height: 15px;
+        padding: 10px;
+        justify-content: flex-end;
+    }
+
+    .puzzle_statement {
+        margin-left: 20px;
+        font-size: 25px;
+    }
+
+    .Answers a {
+        padding-right: 5%;
+    }
+
+    .Answers {
+        font-size: 1.7rem;
+        margin-top: -12px;
+    }
+
+    .Puzzle_Answers {
+        width: 60%;
+        margin-left: 20px;
+    }
+
+    .header a {
+        font-size: 3.5rem;
+    }
+}
+
+#description {
+    display: none;
+}
+#correct {
+    display: none;
+}
+#wrong {
+    display: none;
+}
+#question {
+    display: none;
 }

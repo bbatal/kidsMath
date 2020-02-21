@@ -2,4 +2,18 @@ html, body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: Courgette, sans-serif;
+    font-weight: 100;
 }
+
+body {
+    background-image: url(assets/images/school.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@font-face {
+    font-family: made-up;
+    src: url(assets/fonts/Adikku_Pandai_Menari.ttf) format("truetype");
+  }
