@@ -8,6 +8,15 @@
     margin-top: 30px;
 }
 
+.bob {
+    display: none;
+}
+
+::selection {
+    color: none;
+    background: none;
+}
+
 .header {
     margin-top: 10px;
 }
@@ -98,7 +107,7 @@
 }
 
 .Answers {
-    width: 100%;
+    width: 130%;
     height: 40px;
     cursor: pointer;
     font-size: 2rem;
@@ -121,30 +130,54 @@
 // makes the div seem as if it is clickable from anywhere inside yellow hover border
 .Answers a {
     border: 1px solid transparent;
-    padding-right: 60%;
+    padding-right: 80%;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-.Answers a:focus {
-    outline-width: 1px;
-}
+@media only screen and (max-width: 870px) {
+    .Puzzle_Container {
+        max-width: 95%;
+    }
 
-@media only screen and (max-width: 850px) {
+    .Puzzle {
+        width: 93%;
+    }
+    .header {
+        width: 100%;
+        text-align: center;
+        margin-top: -30px;
+        background-color: rgba($color: #000000, $alpha: 0.4);
+    }
+
+    .header a {
+        font-size: 35px; 
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 200px;
+    }
+
+    .bob {
+        display: inline;
+        padding-right: 200px;
+    }
+} 
+
+
+@media only screen and (max-width: 767px) {
     .Puzzle_Container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        max-width: 99%;
-        border: 1px solid black;
+        max-width: 85%;
+        height: 420px;
     }
 
     .Puzzle {
-        border: 1px solid black;
-        height: 450px;
+        height: 390px;
         margin-bottom: 20px;
         background-color: #1e683d;
-        width: 96%;
+        width: 90%;
     }
 
     .Results {
@@ -154,6 +187,38 @@
         height: 15px;
         padding: 10px;
         justify-content: flex-end;
+    }
+
+    .puzzle_statement {
+        margin-left: 20px;
+        font-size: 25px;
+    }
+
+    .Answers a {
+        padding-right: 5%;
+    }
+
+    .Answers {
+        font-size: 1.7rem;
+        margin-top: -12px;
+    }
+
+    .Puzzle_Answers {
+        width: 60%;
+        margin-left: 20px;
+    }
+
+    .header a {
+        font-size: 30px; 
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 30px;
+    }
+
+    .bob {
+        display: inline;
+        padding-right: 30px;
+        font-size: 30px;
     }
 }
 
