@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MathLogicService } from '../math-logic.service';
-import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faTimes, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-subtraction',
@@ -16,6 +16,7 @@ export class SubtractionComponent implements OnInit {
   wrongBox: number = 0;
   faCheck = faCheck;
   faTimes = faTimes;
+  faArrowLeft = faArrowLeft;
 
   constructor(private numGen: MathLogicService) { }
 
