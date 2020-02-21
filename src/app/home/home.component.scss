@@ -57,6 +57,23 @@
     padding: 10px 50px;
 }
 
+@media only screen and (max-width: 870px) {
+    .header a {
+        font-size: 35px; 
+    }
+
+} 
+
+
+@media only screen and (max-width: 767px) {
+    .header a {
+        font-size: 30px; 
+    }
+
+}
+
 #description {
     display: none;
 }
+
+

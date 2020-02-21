@@ -57,12 +57,14 @@ faArrowLeft = faArrowLeft;
   }
 
   myFunction(event) {
+    const question3 = document.getElementById('mainQuestion');
     if (event.target.innerText == this.answer) {
       this.numGen.addCorrectBox();
     } else {
       this.numGen.addWrongBox();
     }
     this.ngOnInit();
+    question3.focus();
   }
 
   accessLink(event) {

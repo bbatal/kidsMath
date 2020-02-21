@@ -54,12 +54,14 @@ export class SubtractionComponent implements OnInit {
   }
 
   myFunction(event) {
+    const question3 = document.getElementById('mainQuestion');
     if (event.target.innerText == this.answer) {
       this.numGen.subtractCorrectBox();
     } else {
       this.numGen.subtractWrongBox();
     }
     this.ngOnInit();
+    question3.focus();
   }
 
   accessLink(event) {
