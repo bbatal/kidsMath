@@ -20,15 +20,15 @@ export class MultiplyComponent implements OnInit {
   constructor(private numGen: MathLogicService) { }
 
   ngOnInit(): void {
-    this.question = Math.floor(Math.random() * (25));
-    this.question2 = Math.floor(Math.random() * 30);
+    this.question = Math.floor(Math.random() * 6);
+    this.question2 = Math.floor(Math.random() * 9);
     this.answer = this.question * this.question2;
 
     this.numbers = [
-      (Math.floor(Math.random() * 5)) * 10,
-      (Math.floor(Math.random() * 20)) * 7,
+      (Math.floor(Math.random() * 5)),
+      (Math.floor(Math.random() * 20)),
       this.answer,
-      (Math.floor(Math.random() * 25)) * 3
+      (Math.floor(Math.random() * 32))
     ]
     
     this.rightBox = this.numGen.multiplyCorrectAns;

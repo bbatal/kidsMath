@@ -21,6 +21,7 @@
     text-decoration: none;
     font-size: 4.5rem;
     color: whitesmoke;
+    font-family: made-up;
 }
 
 .Categories {
@@ -35,12 +36,12 @@
 
 .Categories .wood {    
     flex: 1 1 auto;
-    border: 1px solid black;
     border-radius: 5px;
-    background-color: rgba($color: #602525, $alpha: 1.0);
-    padding: 10px 50px;
+    padding: 10px 0px;
     text-align: center; 
     margin-top: 40px;
+    background-image: url("src/assets/images/wood-pattern.png");
+    background-color: #0a0000;;
 }
 
 .Categories ul {
@@ -53,6 +54,7 @@
     text-decoration: none;
     color: whitesmoke;
     font-size: 30px;
+    padding: 10px 50px;
 }
 
 #description {
