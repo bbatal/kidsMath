@@ -63,12 +63,14 @@ export class ComparisonComponent implements OnInit {
   }
 
   myFunction(event) {
+    const question3 = document.getElementById('mainQuestion');
     if (event.target.innerText == this.answer) {
       this.numGen.comparisonCorrectBox();
     } else {
       this.numGen.comparisonWrongBox();
     }
     this.ngOnInit();
+    question3.focus();
   }
 
   accessLink(event) {

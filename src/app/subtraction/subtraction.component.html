@@ -8,7 +8,7 @@
         <div class="Incorrect_Results" tabindex="5" aria-describedby="wrong" aria-roledescription="incorrect answer counter"><fa-icon [icon]="faTimes" class="wrong"></fa-icon> {{wrongBox}} </div>
     </div>
     <Div class="Puzzle">
-    <h1 class="puzzle_statement" tabindex="2" aria-describedby="question"> {{question}} - {{question2}} = __?</h1>
+    <h1 class="puzzle_statement" tabindex="2" id="mainQuestion" aria-describedby="question"> {{question}} - {{question2}} = __?</h1>
         <div class="Puzzle_Answers">
             <div class="Answers" *ngFor="let number of shuffle(numbers); let i = index">
                 <span>{{i+1}})  </span><a role="button" id="answer" (click)="myFunction($event)" (keypress)="accessLink($event)" tabindex="3">{{number}}</a>

@@ -54,12 +54,14 @@ export class MultiplyComponent implements OnInit {
   }
 
   myFunction(event) {
+    const question3 = document.getElementById('mainQuestion');
     if (event.target.innerText == this.answer) {
       this.numGen.multiplyCorrectBox();
     } else {
       this.numGen.multiplyWrongBox();
     }
     this.ngOnInit();
+    question3.focus();
   }
 
   accessLink(event) {
