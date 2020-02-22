@@ -149,6 +149,10 @@
         background-color: rgba($color: #000000, $alpha: 0.4);
     }
 
+    .Answers a {
+        padding-right: 60%;
+    }
+
     .header a {
         font-size: 35px; 
         padding-top: 5px;
@@ -196,12 +200,13 @@
     }
 
     .Answers a {
-        padding-right: 5%;
+        padding-right: 95%;
     }
 
     .Answers {
         font-size: 1.7rem;
         margin-top: -12px;
+        width: 122%;
     }
 
     .Puzzle_Answers {
