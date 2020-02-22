@@ -166,6 +166,10 @@
         display: inline;
         padding-right: 200px;
     }
+
+    .Puzzle_Answers .Answers:hover {
+        border: none;
+    }
 } 
 
 
@@ -225,6 +229,10 @@
         display: inline;
         padding-right: 30px;
         font-size: 30px;
+    }
+
+    .Puzzle_Answers .Answers:hover {
+        border: none;
     }
 }
 
