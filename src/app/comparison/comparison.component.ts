@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MathLogicService } from '../math-logic.service';
 import { faCheck, faTimes, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { shuffle } from '../shared-logic';
 
 @Component({
   selector: 'app-comparison',
@@ -17,7 +18,7 @@ export class ComparisonComponent implements OnInit {
   faCheck = faCheck;
   faTimes = faTimes;
   faArrowLeft = faArrowLeft;
-
+  shuffle = shuffle;
 
   constructor(private numGen: MathLogicService) { }
 
@@ -43,23 +44,6 @@ export class ComparisonComponent implements OnInit {
     
     this.rightBox = this.numGen.comparisonCorrectAns;
     this.wrongBox = this.numGen.comparisonWrongAns;
-  }
-
-  shuffle(array) {
-    let m = array.length, t, i;
-  
-    // While there remain elements to shuffle…
-    while (m) {
-  
-      // Pick a remaining element…
-      i = Math.floor(Math.random() * m--);
-  
-      // And swap it with the current element.
-      t = array[m];
-      array[m] = array[i];
-      array[i] = t;
-    }
-    return array;
   }
 
   myFunction(event) {
