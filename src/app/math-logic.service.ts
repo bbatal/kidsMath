@@ -1,3 +1,4 @@
+
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -16,8 +17,24 @@ comparisonWrongAns: number = 0;
 multiplyCorrectAns: number = 0;
 multiplyWrongAns: number = 0;
 
+//ngRX 
+  hello = {
+    'add': {correct: 0, incorrect: 0},
+    'subtract': {correct: 0, incorrect: 0}
 
+  };
   constructor() { }
+
+
+correct1(type:string):number {
+  this.hello[type]['correct'] =+ 1;
+  return this.hello[type].correct;
+}
+
+incorrect1(type:string):number {
+  this.hello[type]['incorrect'] = this.hello[type]['incorrect'] + 1;
+  return this.hello[type].incorrect;
+}
 
 
   addCorrectBox() {
