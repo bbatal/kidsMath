@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MathLogicService } from '../math-logic.service';
 import { faCheck, faTimes, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { shuffle } from '../shared-logic';
 
 @Component({
   selector: 'app-multiply',
@@ -17,6 +18,7 @@ export class MultiplyComponent implements OnInit {
   faCheck = faCheck;
   faTimes = faTimes;
   faArrowLeft = faArrowLeft;
+  shuffle = shuffle;
 
   constructor(private numGen: MathLogicService) { }
 
@@ -36,22 +38,6 @@ export class MultiplyComponent implements OnInit {
     this.wrongBox = this.numGen.multiplyWrongAns;
   }
 
-  shuffle(array) {
-    let m = array.length, t, i;
-  
-    // While there remain elements to shuffle…
-    while (m) {
-  
-      // Pick a remaining element…
-      i = Math.floor(Math.random() * m--);
-  
-      // And swap it with the current element.
-      t = array[m];
-      array[m] = array[i];
-      array[i] = t;
-    }
-    return array;
-  }
 
   myFunction(event) {
     const question3 = document.getElementById('mainQuestion');
